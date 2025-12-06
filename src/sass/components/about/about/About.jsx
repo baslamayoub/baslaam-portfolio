@@ -2,7 +2,6 @@ import React from "react";
 import { FaUser, FaFolder, FaHeadset } from "react-icons/fa";
 import projects from "../../../../assets/data";
 
-console.log(projects);
 
 const About = () => {
   return (

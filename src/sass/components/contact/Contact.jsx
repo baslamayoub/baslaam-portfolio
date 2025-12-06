@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { BsFillEnvelopeAtFill } from "react-icons/bs";
 import { CiLinkedin } from "react-icons/ci";
@@ -21,8 +22,7 @@ const Contact = () => {
       type: "",
     }));
   }, []);
-  console.log(notification.active);
-  
+
   if (notification.active === "active") {
     setTimeout(() => {
       handleCloseNotification();
@@ -34,7 +34,6 @@ const Contact = () => {
       ...prevData,
       [name]: value,
     }));
-    console.log(formData);
   };
 
   // handleSubmit
@@ -56,16 +55,15 @@ const Contact = () => {
         setNotification({
           message: "sent message success!",
           type: "success",
-          active:"active",
+          active: "active",
         });
         setFormData({ name: "", email: "", project: "" });
       } else {
         setNotification({
           message: "Failed message sent noooooot successful!",
           type: "error",
-          active:"active"
+          active: "active",
         });
-
       }
     });
   };
