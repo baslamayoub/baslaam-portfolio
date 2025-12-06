@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { FaRegEnvelope } from "react-icons/fa";
 import {
   IoBriefcaseOutline,
   IoCloseOutline,

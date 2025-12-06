@@ -1,6 +1,6 @@
 import React from "react";
 import { CiLinkedin } from "react-icons/ci";
-import { FaDribbble, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaDribbble, FaGithub } from "react-icons/fa";
 
 const Social = ({ row }) => {
   return (

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import projects from "../../../assets/data";
 
-
 const categories = ["All", "UI/UX", "Web Apps", "E-commerce"];
 
 const ProjectSection = () => {
@@ -47,8 +46,8 @@ const ProjectSection = () => {
                   ))}
                 </div>
                 <div className="links">
-                  <a href="#">View Live</a>
-                  <a href="#">Source Code</a>
+                  <a href="https://github.com/baslamayoub/">View Live</a>
+                  <a href="https://github.com/baslamayoub/">Source Code</a>
                 </div>
               </div>
             </div>
