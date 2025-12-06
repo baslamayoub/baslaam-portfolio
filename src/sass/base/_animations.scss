@@ -1,0 +1,74 @@
+@keyframes showHeader {
+  0% {
+    transform: translateY(40rem);
+  }
+  80% {
+    transform: translateY(-6rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+@keyframes hideHeader {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(40rem);
+  }
+}
+
+@keyframes borderImage {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 40% 70% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3rem);
+  }
+}
+
+@keyframes scrolldownArrow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.7rem);
+  }
+}
+
+// rotate the hand of name
+@keyframes retate {
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+//for showing social  media
+@keyframes showSocial {
+  0% {
+    transform: translateY(-20rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}

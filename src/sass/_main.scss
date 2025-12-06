@@ -1,0 +1,200 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/base";
+@import "./base/animations";
+@import "./base/utilities";
+@import "./components/header/_header.scss";
+@import "./components/home/Social/social";
+@import "./pages/home/home";
+@import "./components/home/data-home/data";
+@import "./components/home/image-home/image";
+@import "./components/home/scroll/scroll";
+@import "./components/about/about/about";
+@import "./components/about/about/about";
+@import "./components/skills/skill";
+@import "./components/services/services";
+@import "./components/portfolio/portfolio";
+@import "./components/testemotional/testemotional";
+@import "./components/contact/contact";
+@import "./components/footer/footer";
+@import "./components/notification/notification";
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/* Responsive typography */
+// @media screen and (max-width: 992px) {
+//   $big-font-size: 2.75rem;
+//   $h1-font-size: 1.5rem;
+//   $h2-font-size: 1.25rem;
+//   $h3-font-size: 1rem;
+//   $normal-font-size: 0.938rem;
+//   $small-font-size: 0.813rem;
+//   $smaller-font-size: 0.75rem;
+// }
+
+/*=============== BASE ===============*/
+
+body,
+button,
+input,
+textarea {
+  font-family: $body-font-3;
+  font-size: $normal-font-size;
+  align-self: flex-start;
+}
+
+body {
+  background-color: $container-color;
+  color: $text-color;
+}
+
+h1,
+h2,
+h3 {
+  color: $title-color;
+  font-weight: $font-semi-bold;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE SASS CLASSES ===============*/
+.section {
+  padding: 6rem 0;
+  background-color: $container-color;
+  @include respond(tab-port) {
+    // margin: 10rem 0;
+    padding: 10rem 0;
+  }
+  .title {
+    margin-bottom: 8rem;
+  }
+  &__title {
+    font-size: $h1-font-size;
+    color: $title-color;
+    text-align: center;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: $small-font-size;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  @include container;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+  display: inline-block;
+  background-color: $title-color;
+  color: $container-color;
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: $font-medium;
+  transition: all 0.3s;
+  align-self: flex-start;
+
+  &:hover {
+    background-color: $title-color-dark;
+  }
+
+  &__icon {
+    // margin-left: $mb-0-5;
+    width: auto;
+    height: auto;
+  }
+
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+// /* For large devices */
+// @media screen and (max-width: 992px) {
+//   .container {
+//     margin: 0 4rem 0 4rem;
+//   }
+
+//   .button {
+//     padding: 1rem 1.75rem;
+//   }
+
+//   .button__icon {
+//     width: 2.2rem;
+//     height: 2.2rem;
+//   }
+// }
+
+// /* For medium devices */
+// @media screen and (max-width: 768px) {
+//   body {
+//     margin: 0 0 $header-height 0;
+//   }
+
+//   .section {
+//     // padding: 2rem 0 4rem;
+
+//     &__subtitle {
+//       margin-bottom: $mb-4-8;
+//     }
+//   }
+// }
+
+// /* For small devices */
+// @media screen and (max-width: 350px) {
+//   $big-font-size: 2.25rem;
+
+//   // .container {
+//   //   margin-left: $mb-1;
+//   //   margin-right: $mb-1;
+//   // }
+// }
+/*
+@include respond(phone){
+  
+}
+@include respond(tab-port){
+
+}
+@include respond(tab-land){
+
+}
+@include respond(big-desktop){
+
+}
+
+*/

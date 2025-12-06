@@ -1,0 +1,117 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-fixed;
+  background-color: $container-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  
+  // padding: 0 1rem;
+  
+  @include respond(tab-port){
+    top: initial;
+    bottom: 0;
+    padding: 2rem 0;
+    box-shadow:4px 0px 8px rgba(0, 0, 0, 0.1);
+  }
+  .nav {
+    height: calc($header-height + 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // column-gap: 1rem;
+    position: relative;
+    @include respond(tab-port) {
+      height: $header-height;
+    }
+    &__logo {
+      color: $title-color;
+      transition: all 0.3s;
+      font-weight: $font-semi-bold;
+      font-size: $h1-font-size;
+      &:hover {
+        color: $title-color-dark;
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      transition: all 1s;
+      @include respond(tab-port) {
+        position: fixed;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: $body-color;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: #00000026 0.1rem 0px 1.2rem 0.3rem;
+        padding: 5rem 2rem ;
+        &.active {
+          animation: showHeader 0.5s ease-out forwards;
+        }
+        &.close {
+          animation: hideHeader 0.5s ease-in-out forwards;
+        }
+      }
+      @include respond(phone) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      &--link {
+        font-size: $normal-font-size;
+        font-weight: $font-normal;
+        color: $title-color;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover,
+        .active-link {
+          color: $title-color-dark;
+        }
+      }
+
+      &--icon,
+      &--close {
+        display: none;
+        font-size: 3rem;
+        transition: all 0.3s;
+        font-weight: $font-semi-bold;
+        cursor: pointer;
+        @include respond(tab-port) {
+          display: block;
+        }
+        &:hover {
+          color: $title-color-dark;
+        }
+      }
+    }
+    &__toggle {
+      display: none;
+      @include respond(tab-port) {
+        display: inline-block;
+      }
+    }
+    &__app {
+      font-size: 4rem;
+      line-height: 1.7rem;
+      transition: all 0.3s;
+      font-weight: $font-semi-bold;
+      cursor: pointer;
+      &:hover {
+        color: $title-color-dark;
+      }
+    }
+    &__close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+}

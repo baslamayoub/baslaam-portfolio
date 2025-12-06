@@ -1,0 +1,27 @@
+.home__img {
+  background: url(../../../../assets/1997.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 30%);
+  order: 1;
+  width: 35rem;
+  height: 35rem;
+  justify-self: center;
+  animation: borderImage 8s infinite 1s;
+
+  @include respond(tab-port) {
+    order: initial;
+    width: 40rem;
+    height: 40rem;
+    box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 30%);
+    margin: 2rem 0;
+  }
+  @include respond(phone) {
+    order: initial;
+
+    // width: 12.5rem;
+    // height: 12.5rem;
+    box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 30%);
+  }
+}

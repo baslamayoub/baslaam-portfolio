@@ -1,0 +1,65 @@
+/*
+$breakpoint argument choices:
+- phone             ( 600px /  16px )    =  37.5em      
+- tab-port          ( 900px /  16px )   =  56.5em
+- tab-land          ( 1200px / 16px )  =  75em
+- big-desktop       ( 1800px / 16px )  =  112.5em
+
+*/
+
+// @mixin respond($breakpoint){
+//     @if $breakpoint == phone {
+//         @media (max-width : 37.5em){@content}
+//     };
+//     @if $breakpoint == tab-port {
+//         @media (max-width : 48em){@content}
+//     };
+//     @if $breakpoint == tab-land {
+//         @media (max-width : 75em){@content}
+//     };
+//     @if $breakpoint == big-desktop {
+//         @media (min-width :112.5em ){@content}
+//     };
+// }
+@mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media (max-width: 25em) {
+      // 400px and above
+      @content;
+    }
+  }
+  @else if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // Up to 600px
+      @content;
+    }
+  } @else if $breakpoint == tab-port {
+    @media (max-width: 48em) {
+      // 601px to 768px
+      @content;
+    }
+  } @else if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      // 769px to 1200px
+      @content;
+    }
+  } @else if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      // 1800px and above
+      @content;
+    }
+  }
+}
+@mixin container {
+  width: 100%;
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  @media (max-width: max-width) {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+}

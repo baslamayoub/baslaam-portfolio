@@ -1,0 +1,95 @@
+.contact {
+  &__cards {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    @include respond(tab-port){
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    gap: 6rem;
+    text-align: center;
+    &--talk {
+      &-content {
+        &-item {
+          padding: 1rem;
+          margin: 2rem 0;
+          border: solid $border-color 0.1rem;
+          border-radius: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: $container-color-light;
+          &:hover .item-icon {
+            color: $text-color-dark;
+          }
+          & .item-icon {
+            font-size: 3rem;
+            margin: 1rem 0;
+            transition: all 0.3s;
+          }
+          & a {
+            color: $text-color;
+            transition: 0.5s all;
+            margin: 0.8rem 0;
+            & .link-icon {
+              margin-bottom: -0.5rem;
+            }
+            &:hover {
+              color: $text-color-dark;
+            }
+          }
+          & p {
+            color: rgba($text-color, 0.5);
+            font-size: 1.4rem;
+          }
+          & h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    &--write {
+      &-content {
+        margin-top: 2rem;
+      }
+      .block {
+        position: relative;
+        label {
+          position: absolute;
+          top: -1rem;
+          left: 1rem;
+          padding: -0.3rem 0.8rem;
+          background-color: $container-color-light;
+          font-size: 1.2rem;
+        }
+        input {
+          width: 100%;
+          border-radius: 1rem;
+          outline: none;
+          border: none;
+          border: 0.1rem solid $border-color;
+          padding: 1rem 1.5rem;
+          margin-bottom: 3rem;
+        }
+        textarea {
+          width: 100%;
+          border-radius: 1rem;
+          outline: none;
+          border: none;
+          border: 0.1rem solid $border-color;
+          padding: 1rem 1.5rem;
+          margin-bottom: 2rem;
+          resize: none;
+          height: 25rem;
+        }
+      }
+      button {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

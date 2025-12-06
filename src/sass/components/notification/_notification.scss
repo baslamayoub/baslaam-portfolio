@@ -1,0 +1,24 @@
+.notification {
+  position: fixed;
+  bottom: 2rem;
+  padding: 1rem 3rem 1rem 1rem;
+  border-radius: 0.3rem;
+  transition: all 1s;
+}
+
+.success {
+  border: 0.1rem solid #b7e4c7;
+  background-color: #d8f3dc;
+  color: #217a2e;
+}
+.error {
+  border: 0.1rem solid #f5b7b1;
+  background-color: #fdecea;
+  color: #c0392b;
+}
+.active {
+  right: 2rem;
+}
+.hide {
+  right: -30rem;
+}

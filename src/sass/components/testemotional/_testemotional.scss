@@ -1,0 +1,43 @@
+.testemotional {
+  margin: 0 1rem;
+
+  &-cards {
+  }
+  &-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.1rem $border-color solid;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 25rem;
+    margin: 0rem 2rem 2rem;
+    background-color: $container-color-light;
+    @include respond(tab-port){
+        margin: 0 ;
+    }
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+  &-role {
+    font-size: 1.2rem;
+  }
+  &-name {
+    font-size: 1.8rem;
+  }
+  &-desk {
+    font-size: 1.6rem;
+  }
+  &-img{
+    width: 10rem;
+    height:  10rem;
+    border-radius: 50%;
+  }
+}
